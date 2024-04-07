@@ -1,0 +1,127 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FraudDetectionRepositoryPatternProject
+build_property.RootNamespace = FraudDetectionRepositoryPatternProject
+build_property.ProjectDir = C:\Users\alagi\source\repos\FraudDetectionRepositoryPatternProject\FraudDetectionRepositoryPatternProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\alagi\source\repos\FraudDetectionRepositoryPatternProject\FraudDetectionRepositoryPatternProject
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/FraudulentIncidentDetail/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJhdWR1bGVudEluY2lkZW50RGV0YWlsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/FraudulentIncidentDetail/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJhdWR1bGVudEluY2lkZW50RGV0YWlsXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/FraudulentIncidentDetail/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJhdWR1bGVudEluY2lkZW50RGV0YWlsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/FraudulentIncidentDetail/FindAllIncidents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJhdWR1bGVudEluY2lkZW50RGV0YWlsXEZpbmRBbGxJbmNpZGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Shared/_CustomLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DdXN0b21MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Shared/_TableLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UYWJsZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/FilterTransactions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XEZpbHRlclRyYW5zYWN0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/FindAllTransactions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XEZpbmRBbGxUcmFuc2FjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/TransactionsJoinIncidents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XFRyYW5zYWN0aW9uc0pvaW5JbmNpZGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/TransactionHistory/TransactionsWithIncidents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25IaXN0b3J5XFRyYW5zYWN0aW9uc1dpdGhJbmNpZGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/UserRegister - Copy/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJlZ2lzdGVyIC0gQ29weVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/UserRegister/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJlZ2lzdGVyXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/UserRegister/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJlZ2lzdGVyXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/alagi/source/repos/FraudDetectionRepositoryPatternProject/FraudDetectionRepositoryPatternProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lrv7j4npyc

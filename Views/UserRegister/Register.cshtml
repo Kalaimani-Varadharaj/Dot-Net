@@ -1,0 +1,136 @@
+﻿@model FraudDetectionRepositoryPatternProject.Models.UserRegister
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<body>
+
+  <main>
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+              <div class="d-flex justify-content-center py-4">
+                                <a href="@Url.Action("FindAllIncidents", "FraudulentIncidentDetail")" class="logo d-flex align-items-center w-auto">
+                                    <img src="~/content/assets/img/logo.png" alt="">
+                                    <span class="d-none d-lg-block">TrueTide Financial </span>
+                </a>
+              </div><!-- End Logo -->
+
+              <div class="card mb-3">
+
+                <div class="card-body">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
+                    <p class="text-center small">Enter your personal details to create account</p>
+                  </div>
+
+                                    <form id="registerForm" asp-action="Register">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                        <div class="form-group col-12">
+                                            <label asp-for="UserName" class="control-label"></label>
+                                            <input asp-for="UserName" class="form-control" />
+                                            <span asp-validation-for="UserName" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group col-12">
+                                            <label asp-for="Password" class="control-label"></label>
+                                            <input asp-for="Password" class="form-control" />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group col-12">
+                                            <label asp-for="ConfirmPassword" class="control-label"></label>
+                                            <input asp-for="ConfirmPassword" class="form-control" />
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                        </div>
+
+                                        
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <p class="small mb-0">Already have an account? <a href="@Url.Action("Login", "UserRegister")">Log in</a></p>
+                                        </div>
+                                    </form>
+
+                </div>
+              </div>
+                            @section Scripts {
+                                <script>
+                                    $(document).ready(function () {
+                                        // Apply jQuery Validation to the form
+                                        $("#registerForm").validate({
+                                            rules: {
+                                                UserName: {
+                                                    required: true,
+                                                    lettersOnly: true // Custom rule for letters only
+                                                },
+                                                Password: {
+                                                    required: true,
+                                                    minlength: 6 // Minimum length of 6 characters
+                                                    // Add additional rules as needed
+                                                },
+                                                ConfirmPassword: {
+                                                    required: true,
+                                                    equalTo: "#Password" // Ensure it matches the password field
+                                                }
+                                            },
+                                            messages: {
+                                                UserName: {
+                                                    required: "User Name is required.",
+                                                    lettersOnly: "User Name should contain only letters (alphabets)."
+                                                },
+                                                Password: {
+                                                    required: "Password is required.",
+                                                    minlength: "Password should be greater than 5 characters."
+                                                    // Add additional error messages as needed
+                                                },
+                                                ConfirmPassword: {
+                                                    required: "Confirm Password is required.",
+                                                    equalTo: "Confirm Password should match the Password."
+                                                }
+                                            }
+                                        });
+
+                                        // Add a custom rule for letters only
+                                        $.validator.addMethod("lettersOnly", function (value, element) {
+                                            return this.optional(element) || /^[a-zA-Z]+$/.test(value);
+                                        }, "Please enter letters only.");
+                                    });
+                                </script>
+                            }
+
+              
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/content/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="~/content/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/content/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="~/content/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="~/content/assets/vendor/quill/quill.min.js"></script>
+    <script src="~/content/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="~/content/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="~/content/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/content/assets/js/main.js"></script>
+</body>
+

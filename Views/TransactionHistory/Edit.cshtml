@@ -1,0 +1,182 @@
+﻿@model FraudDetectionRepositoryPatternProject.Models.TransactionHistory
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TransactionHistory</h4>
+<hr />
+<div class="alert @(ViewData["Response"] != null && ViewData["Response"].ToString().Contains("successfully") ? "alert-success" : "alert-danger")">
+    @ViewData["Response"]
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" id="editForm">
+            <div class="text-danger" id="validationSummary"></div>
+            <div class="form-group">
+                <label asp-for="TransactionReferenceNumber" class="control-label"></label>
+                <input asp-for="TransactionReferenceNumber" class="form-control" id="transactionReferenceNumber" />
+                <span class="text-danger" id="transactionReferenceNumberError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionDateTime" class="control-label"></label>
+                <input asp-for="TransactionDateTime" class="form-control" id="transactionDateTime" />
+                <span class="text-danger" id="transactionDateTimeError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" id="amount" />
+                <span class="text-danger" id="amountError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenderAccountNumber" class="control-label"></label>
+                <input asp-for="SenderAccountNumber" class="form-control" id="senderAccountNumber" />
+                <span class="text-danger" id="senderAccountNumberError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BeneficiaryAccountNumber" class="control-label"></label>
+                <input asp-for="BeneficiaryAccountNumber" class="form-control" id="beneficiaryAccountNumber" />
+                <span class="text-danger" id="beneficiaryAccountNumberError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenderName" class="control-label"></label>
+                <input asp-for="SenderName" class="form-control" id="senderName" />
+                <span class="text-danger" id="senderNameError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BeneficiaryName" class="control-label"></label>
+                <input asp-for="BeneficiaryName" class="form-control" id="beneficiaryName" />
+                <span class="text-danger" id="beneficiaryNameError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentMethod" class="control-label"></label>
+                <input asp-for="PaymentMethod" class="form-control" id="paymentMethod" />
+                <span class="text-danger" id="paymentMethodError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label"></label>
+                <input asp-for="CreatedAt" class="form-control" id="createdAt" />
+                <span class="text-danger" id="createdAtError"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedAt" class="control-label"></label>
+                <input asp-for="ModifiedAt" class="form-control" id="modifiedAt" />
+                <span class="text-danger" id="modifiedAtError"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#editForm").submit(function (event) {
+                // Reset previous validation messages
+                $(".text-danger").text("");
+
+                // Perform your custom validation
+                var isValid = true;
+                // Example: Validate Required Field
+                var transactionReferenceNumber = $("#transactionReferenceNumber").val();
+                if (!transactionReferenceNumber) {
+                    $("#transactionReferenceNumberError").text("Transaction Reference Number is required.");
+                    isValid = false;
+                } else {
+                    // Example: Validate Transaction Reference Number Format
+                    if (transactionReferenceNumber.length !== 7 || isNaN(transactionReferenceNumber)) {
+                        $("#transactionReferenceNumberError").text("The Transaction Reference Number should be a 7-digit number.");
+                        isValid = false;
+                    }
+                }
+
+                // Add more validation logic for other fields...
+                // Example: Validate TransactionDateTime (allow past and present, not future)
+                var transactionDateTime = $("#transactionDateTime").val();
+                var currentDateTime = new Date().toISOString().split('T')[0];
+                if (transactionDateTime > currentDateTime) {
+                    $("#transactionDateTimeError").text("Transaction date should be a past or present date.");
+                    isValid = false;
+                }
+
+                var amount = $("#amount").val();
+                if (!amount) {
+                    $("#amountError").text("Amount is required.");
+                    isValid = false;
+                } else if (!/^\d+(\.\d+)?$/.test(amount)) {
+                    $("#amountError").text("Amount should contain only decimal digits.");
+                    isValid = false;
+                } else if (parseFloat(amount) === 0) {
+                    $("#amountError").text("Amount should not be 0.");
+                    isValid = false;
+                } else {
+                    $("#amountError").text(""); // Clear error message
+                }
+
+                var senderAccountNumber = $("#senderAccountNumber").val();
+                if (!senderAccountNumber) {
+                    $("#senderAccountNumberError").text("Sender Account Number is required.");
+                    isValid = false;
+                } else {
+                    // Example: Validate Transaction Reference Number Format
+                    if (senderAccountNumber.length !== 10 || isNaN(senderAccountNumber)) {
+                        $("#senderAccountNumberError").text("The Sender Account Number should be a 10-digit number.");
+                        isValid = false;
+                    }
+                }
+
+                var beneficiaryAccountNumber = $("#beneficiaryAccountNumber").val();
+                if (!senderAccountNumber) {
+                    $("#beneficiaryAccountNumberError").text("Beneficiary Account Number is required.");
+                    isValid = false;
+                } else {
+                    // Example: Validate Transaction Reference Number Format
+                    if (beneficiaryAccountNumber.length !== 10 || isNaN(beneficiaryAccountNumber)) {
+                        $("#beneficiaryAccountNumberError").text("The Beneficiary Account Number should be a 10-digit number.");
+                        isValid = false;
+                    }
+                }
+
+                // // Example: Validate PaymentMethod (not empty)
+                // var paymentMethod = $("#paymentMethod").val();
+                // if (paymentMethod === "Select") {
+                //     $("#paymentMethodError").text("Payment Method is required.");
+                //     isValid = false;
+                // } else {
+                //     $("#paymentMethodError").text(""); // Clear error message
+                // }
+
+                var createdAt = new Date($("#createdAt").val());
+                var currentDateTime = new Date();
+
+                if (createdAt > currentDateTime) {
+                    $("#createdAtError").text("Created At date should be a past or present date.");
+                    isValid = false;
+                }
+
+                var modifiedAt = new Date($("#modifiedAt").val());
+
+                if (modifiedAt > currentDateTime) {
+                    $("#modifiedAtError").text("ModifiedAt date should be a past or present date.");
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    // Prevent form submission if validation fails
+                    event.preventDefault();
+                    //$("#validationSummary").text("Form submission failed. Please fix the validation errors.");
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FraudDetection</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FraudDetectionRepositoryPatternProject.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            height: 15%;
+            text-align: center;
+            font-weight: bold;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            padding: 20px;
+        }
+
+        .container-main {
+            flex: 1;
+            display: flex;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar {
+            height: 100%;
+            position: sticky;
+            top: 0;
+            background-color: #f8f9fa;
+            overflow: auto;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .advertisement {
+            width: 20%; /* Adjust the width as needed */
+            background-color: #f8f9fa;
+            padding: 20px; /* Adjust padding as needed */
+            overflow: auto;
+        }
+
+            .advertisement img {
+                max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+                max-height: 100%; /* Ensure the image doesn't exceed the height of its container */
+                display: block; /* Remove any extra space beneath the image */
+                margin: auto; /* Center the image horizontally */
+                margin-bottom: 10px;
+            }
+
+        footer {
+            height: 15%;
+            text-align: center;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            Fraud Detection And Risk Management
+        </div>
+    </header>
+    <div class="container-main">
+        <nav class="col-md-2 d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="TransactionHistory" asp-action="Create">Add Transaction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="TransactionHistory" asp-action="FindAllTransactions">Find All Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="TransactionHistory" asp-action="TransactionsWithIncidents">Transactions With Incidents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="TransactionHistory" asp-action="FilterTransactions">Filter Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="TransactionHistory" asp-action="TransactionsJoinIncidents" asp-route-amount="123.45" asp-route-paymentMethod="Credit Card">Transactions join Incidents</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="main-content">
+            <!-- Content -->
+            @RenderBody()
+        </main>
+        <div class="advertisement">
+            <img src="https://uploads-ssl.webflow.com/608353cb0067e32edaa3e4c9/6250494d364f324bb344c194_BLOG%201%20-%20eBook%20Introduction%20to%20Fraud%20Detection%20Detailed%20Version.jpg" alt="Advertisement">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmecpvd1KU_tP_hwboj8vahnh6RwHmcgIsdDFdZn2umkjA6rBqzDoLH4hBQENe3LUQAbY&usqp=CAU" alt="Advertisement">
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 - FraudDetectionAndRiskManagement @* - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
